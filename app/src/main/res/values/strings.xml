@@ -2,4 +2,5 @@
     <string name="app_name">deth</string>
     <string name="infura_url">https://ropsten.infura.io/z4SkAPwmdcd4VosBOQy3</string>
     <string name="pref_file">pref_file</string>
+    <string name="wallet_file_name">eth_wallet_file</string>
 </resources>

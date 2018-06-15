@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private var _clientVersionTxt: TextView? = null
     private var _hashRateTxt: TextView? = null
     private var _ethBalance: TextView? = null
+    private var _walletAddress:TextView? = null
 
     private val _vm by lazy {
         ViewModelProviders.of(this).get(Web3ViewModel::class.java)
@@ -27,7 +28,8 @@ class MainActivity : AppCompatActivity() {
 
         _clientVersionTxt = findViewById(R.id.web3_client_version)
         _hashRateTxt = findViewById(R.id.web3_hash_rate_field)
-        _ethBalance = findViewById(R.id.web3_address_field)
+        _ethBalance = findViewById(R.id.web3_balance_field)
+        _walletAddress = findViewById(R.id.web3_address_field)
 
         (application as App).getWeb3Component().inject(_vm)
     }
@@ -46,6 +48,9 @@ class MainActivity : AppCompatActivity() {
 
         _vm.getEthBalance("0xcD426A761e3a25e2045BE211552627cf623DaD09")
                 .observe(this, Observer { balance -> _ethBalance?.text = balance })
+
+        val addr:String = _vm.getWallet("testPasswd").address
+        _walletAddress?.text = addr
     }
 
 

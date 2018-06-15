@@ -4,6 +4,7 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.ehanoc.kotleth.repositories.Web3Repository
+import org.web3j.crypto.Credentials
 import java.math.BigInteger
 import javax.inject.Inject
 
@@ -18,6 +19,10 @@ class Web3ViewModel : ViewModel() {
     private val _clientVersion: MutableLiveData<String> = MutableLiveData()
     private val _ethHashRate: MutableLiveData<BigInteger> = MutableLiveData()
     private val _ethBalance: MutableLiveData<String> = MutableLiveData()
+
+    fun getWallet(password:String): Credentials {
+        return _web3Repo.openWallet(password)
+    }
 
     fun getClientVersion(): LiveData<String> {
         _web3Repo.getVersion()

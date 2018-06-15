@@ -41,7 +41,7 @@
         app:layout_constraintVertical_bias="0.205" />
 
     <TextView
-        android:id="@+id/web3_address_field"
+        android:id="@+id/web3_balance_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -50,6 +50,17 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.243" />
+
+    <TextView
+        android:id="@+id/web3_address_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="474dp" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -8,6 +8,7 @@ import dagger.Provides
 import org.web3j.protocol.Web3j
 import org.web3j.protocol.Web3jFactory
 import org.web3j.protocol.http.HttpService
+import java.io.File
 import javax.inject.Singleton
 
 /**
@@ -19,7 +20,8 @@ class Web3Module(val context: Context) {
     @Provides
     @Singleton
     fun provideWeb3Repo(): Web3Repository {
-        return Web3Repository(provideWebj())
+        val walletFile = File(context.filesDir.absolutePath + File.pathSeparator + context.getString(R.string.wallet_file_name))
+        return Web3Repository(provideWebj(), walletFile)
     }
 
     @Provides
