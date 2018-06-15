@@ -1,8 +1,8 @@
-package com.ehanoc.deth.dagger.components
+package com.ehanoc.kotleth.dagger.components
 
-import com.ehanoc.deth.App
-import com.ehanoc.deth.dagger.modules.AppModule
-import com.ehanoc.deth.dagger.modules.Web3Module
+import com.ehanoc.kotleth.App
+import com.ehanoc.kotleth.dagger.modules.AppModule
+import com.ehanoc.kotleth.dagger.modules.Web3Module
 import dagger.Component
 
 /**

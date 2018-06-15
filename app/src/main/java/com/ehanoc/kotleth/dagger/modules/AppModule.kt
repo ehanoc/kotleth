@@ -1,9 +1,9 @@
-package com.ehanoc.deth.dagger.modules
+package com.ehanoc.kotleth.dagger.modules
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.ehanoc.deth.App
-import com.ehanoc.deth.R
+import com.ehanoc.kotleth.App
+import com.ehanoc.kotleth.R
 import dagger.Module
 import dagger.Provides
 

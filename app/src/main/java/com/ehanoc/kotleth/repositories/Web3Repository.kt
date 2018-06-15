@@ -1,4 +1,4 @@
-package com.ehanoc.deth.repositories
+package com.ehanoc.kotleth.repositories
 
 import android.os.Handler
 import android.os.Looper

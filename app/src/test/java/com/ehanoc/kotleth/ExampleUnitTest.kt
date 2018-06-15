@@ -1,4 +1,4 @@
-package com.ehanoc.deth
+package com.ehanoc.kotleth
 
 import org.junit.Test
 

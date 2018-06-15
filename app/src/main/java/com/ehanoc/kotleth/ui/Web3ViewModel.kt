@@ -1,9 +1,9 @@
-package com.ehanoc.deth.ui
+package com.ehanoc.kotleth.ui
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
-import com.ehanoc.deth.repositories.Web3Repository
+import com.ehanoc.kotleth.repositories.Web3Repository
 import java.math.BigInteger
 import javax.inject.Inject
 

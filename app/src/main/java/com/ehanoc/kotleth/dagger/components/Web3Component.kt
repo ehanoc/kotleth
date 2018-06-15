@@ -1,7 +1,7 @@
-package com.ehanoc.deth.dagger.components
+package com.ehanoc.kotleth.dagger.components
 
-import com.ehanoc.deth.dagger.modules.Web3Module
-import com.ehanoc.deth.ui.Web3ViewModel
+import com.ehanoc.kotleth.dagger.modules.Web3Module
+import com.ehanoc.kotleth.ui.Web3ViewModel
 import dagger.Subcomponent
 import javax.inject.Singleton
 

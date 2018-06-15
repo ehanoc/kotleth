@@ -1,12 +1,12 @@
-package com.ehanoc.deth
+package com.ehanoc.kotleth
 
 import android.app.Application
 import android.content.SharedPreferences
-import com.ehanoc.deth.dagger.components.AppComponent
-import com.ehanoc.deth.dagger.components.DaggerAppComponent
-import com.ehanoc.deth.dagger.components.Web3Component
-import com.ehanoc.deth.dagger.modules.AppModule
-import com.ehanoc.deth.dagger.modules.Web3Module
+import com.ehanoc.kotleth.dagger.components.AppComponent
+import com.ehanoc.kotleth.dagger.components.DaggerAppComponent
+import com.ehanoc.kotleth.dagger.components.Web3Component
+import com.ehanoc.kotleth.dagger.modules.AppModule
+import com.ehanoc.kotleth.dagger.modules.Web3Module
 import javax.inject.Inject
 
 /**

@@ -1,4 +1,4 @@
-package com.ehanoc.deth
+package com.ehanoc.kotleth
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

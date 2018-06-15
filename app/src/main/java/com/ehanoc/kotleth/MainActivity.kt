@@ -1,11 +1,11 @@
-package com.ehanoc.deth
+package com.ehanoc.kotleth
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
-import com.ehanoc.deth.ui.Web3ViewModel
+import com.ehanoc.kotleth.ui.Web3ViewModel
 
 class MainActivity : AppCompatActivity() {
 
