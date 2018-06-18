@@ -1,1 +1,13 @@
-include ':app'
+include ':app', ':rlp', ':crypto', ':tuples', ':console', ':infura', ':geth', ':codegen', ':parity', ':abi', ':utils', ':core', ':integration-tests'
+project(':rlp').projectDir = new File('web3j/rlp')
+project(':crypto').projectDir = new File('web3j/crypto')
+project(':tuples').projectDir = new File('web3j/tuples')
+project(':console').projectDir = new File('web3j/console')
+project(':infura').projectDir = new File('web3j/infura')
+project(':geth').projectDir = new File('web3j/geth')
+project(':codegen').projectDir = new File('web3j/codegen')
+project(':parity').projectDir = new File('web3j/parity')
+project(':abi').projectDir = new File('web3j/abi')
+project(':utils').projectDir = new File('web3j/utils')
+project(':core').projectDir = new File('web3j/core')
+project(':integration-tests').projectDir = new File('web3j/integration-tests')

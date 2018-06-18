@@ -9,6 +9,18 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/web3j/abi" />
+            <option value="$PROJECT_DIR$/web3j/codegen" />
+            <option value="$PROJECT_DIR$/web3j/console" />
+            <option value="$PROJECT_DIR$/web3j/core" />
+            <option value="$PROJECT_DIR$/web3j/crypto" />
+            <option value="$PROJECT_DIR$/web3j/geth" />
+            <option value="$PROJECT_DIR$/web3j/infura" />
+            <option value="$PROJECT_DIR$/web3j/integration-tests" />
+            <option value="$PROJECT_DIR$/web3j/parity" />
+            <option value="$PROJECT_DIR$/web3j/rlp" />
+            <option value="$PROJECT_DIR$/web3j/tuples" />
+            <option value="$PROJECT_DIR$/web3j/utils" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

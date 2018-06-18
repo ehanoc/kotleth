@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/web3j/abi/abi.iml" filepath="$PROJECT_DIR$/web3j/abi/abi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/codegen/codegen.iml" filepath="$PROJECT_DIR$/web3j/codegen/codegen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/console/console.iml" filepath="$PROJECT_DIR$/web3j/console/console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/core/core.iml" filepath="$PROJECT_DIR$/web3j/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/crypto/crypto.iml" filepath="$PROJECT_DIR$/web3j/crypto/crypto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/geth/geth.iml" filepath="$PROJECT_DIR$/web3j/geth/geth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/infura/infura.iml" filepath="$PROJECT_DIR$/web3j/infura/infura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/integration-tests/integration-tests.iml" filepath="$PROJECT_DIR$/web3j/integration-tests/integration-tests.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotleth.iml" filepath="$PROJECT_DIR$/kotleth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotleth.iml" filepath="$PROJECT_DIR$/kotleth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/parity/parity.iml" filepath="$PROJECT_DIR$/web3j/parity/parity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/rlp/rlp.iml" filepath="$PROJECT_DIR$/web3j/rlp/rlp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/tuples/tuples.iml" filepath="$PROJECT_DIR$/web3j/tuples/tuples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web3j/utils/utils.iml" filepath="$PROJECT_DIR$/web3j/utils/utils.iml" />
     </modules>
   </component>
 </project>

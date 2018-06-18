@@ -33,40 +33,34 @@ kapt {
 
 dependencies {
     def lifecycle_version = "1.1.1"
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:27.1.1"
-    implementation "com.android.support.constraint:constraint-layout:1.1.2"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     kapt 'com.google.dagger:dagger-compiler:2.11'
     kapt "com.google.dagger:dagger-android-processor:2.11"
-
     implementation 'com.google.dagger:dagger:2.11'
-    implementation "com.google.dagger:dagger-android:2.11"
-    implementation "com.google.dagger:dagger-android-support:2.11"
-
-    implementation ('org.web3j:core:3.3.1-android')
-
+    implementation 'com.google.dagger:dagger-android:2.11'
+    implementation 'com.google.dagger:dagger-android-support:2.11'
+    //implementation ('org.web3j:core:3.3.1-android')
+    implementation project(':core')
     // ViewModel and LiveData
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
     // alternatively - just ViewModel
-    implementation "android.arch.lifecycle:viewmodel:$lifecycle_version" // use -ktx for Kotlin
+    implementation "android.arch.lifecycle:viewmodel:$lifecycle_version"
+    // use -ktx for Kotlin
     // alternatively - just LiveData
     implementation "android.arch.lifecycle:livedata:$lifecycle_version"
     // alternatively - Lifecycles only (no ViewModel or LiveData).
     //     Support library depends on this lightweight import
     implementation "android.arch.lifecycle:runtime:$lifecycle_version"
-
     annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
     // alternately - if using Java8, use the following instead of compiler
     implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
-
     // optional - ReactiveStreams support for LiveData
     implementation "android.arch.lifecycle:reactivestreams:$lifecycle_version"
-
     // optional - Test helpers for LiveData
     testImplementation "android.arch.core:core-testing:$lifecycle_version"
-
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
