@@ -19,9 +19,13 @@ class Web3ViewModel : ViewModel() {
     private val _clientVersion: MutableLiveData<String> = MutableLiveData()
     private val _ethHashRate: MutableLiveData<BigInteger> = MutableLiveData()
     private val _ethBalance: MutableLiveData<String> = MutableLiveData()
+    private val _credentials: MutableLiveData<Credentials> = MutableLiveData()
 
-    fun getWallet(password:String): Credentials {
-        return _web3Repo.openWallet(password)
+    fun getWallet(password:String): LiveData<Credentials> {
+        _web3Repo.openWallet(password)
+                .subscribe ( { result -> _credentials.value = result}, Throwable::printStackTrace )
+
+        return _credentials
     }
 
     fun getClientVersion(): LiveData<String> {

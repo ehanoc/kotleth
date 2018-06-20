@@ -20,8 +20,8 @@ class Web3Module(val context: Context) {
     @Provides
     @Singleton
     fun provideWeb3Repo(): Web3Repository {
-        val walletFile = File(context.filesDir.absolutePath + File.pathSeparator + context.getString(R.string.wallet_file_name))
-        return Web3Repository(provideWebj(), walletFile)
+        val wallet = File(context.filesDir.absolutePath + File.pathSeparator + context.getString(R.string.wallet_folder_name))
+        return Web3Repository(provideWebj(), wallet)
     }
 
     @Provides

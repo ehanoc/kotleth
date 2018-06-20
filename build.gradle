@@ -1,7 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.1.51'
+    ext.android_support_lib_version = '27.1.1'
+
+    ext.kotlin_version = '1.2.50'
     ext.bouncycastleVersion = '1.54'
     ext.jacksonVersion = '2.8.5'
     ext.javapoetVersion = '1.7.0'

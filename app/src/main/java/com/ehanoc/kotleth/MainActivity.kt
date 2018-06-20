@@ -49,8 +49,9 @@ class MainActivity : AppCompatActivity() {
         _vm.getEthBalance("0xcD426A761e3a25e2045BE211552627cf623DaD09")
                 .observe(this, Observer { balance -> _ethBalance?.text = balance })
 
-//        val addr:String = _vm.getWallet("testPasswd").address
-//        _walletAddress?.text = addr
+        _vm.getWallet("testPasswd")
+                .observe(this, Observer { wallet -> _walletAddress?.text = wallet?.address })
+
     }
 
 

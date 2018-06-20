@@ -2,7 +2,9 @@ package com.ehanoc.kotleth.repositories
 
 import android.os.Handler
 import android.os.Looper
+import org.web3j.crypto.Bip39Wallet
 import org.web3j.crypto.Credentials
+import org.web3j.crypto.WalletFile
 import org.web3j.crypto.WalletUtils
 import org.web3j.protocol.Web3j
 import org.web3j.protocol.core.DefaultBlockParameterName
@@ -13,6 +15,7 @@ import rx.Observable
 import rx.Scheduler
 import rx.schedulers.Schedulers
 import java.io.File
+import java.util.concurrent.Callable
 import java.util.concurrent.Executor
 import javax.inject.Inject
 
@@ -22,14 +25,20 @@ import javax.inject.Inject
 class Web3Repository @Inject constructor(web3: Web3j, wallet: File) {
 
     private val _web3: Web3j = web3
-    private val _walletFile:File = wallet
+    private val _wallet:File = wallet
 
-    fun openWallet(password:String): Credentials {
-        if (!_walletFile.exists()) {
-            WalletUtils.generateBip39Wallet(password, _walletFile)
+    fun openWallet(password:String): Observable<Credentials> {
+        if (!_wallet.exists()) {
+            _wallet.mkdirs()
+            WalletUtils.generateBip39Wallet(password, _wallet)
         }
 
-        return WalletUtils.loadCredentials(password, _walletFile)
+        return Observable.fromCallable { WalletUtils.loadCredentials(password, _wallet.listFiles().first().path) }
+                .asObservable()
+                .observeOn(MainScheduler())
+                .subscribeOn(Schedulers.newThread())
+
+        //return WalletUtils.loadCredentials(password, _wallet.listFiles().first().path)
     }
 
     fun getVersion(): Observable<Web3ClientVersion> {
